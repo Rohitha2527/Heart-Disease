@@ -1,0 +1,352 @@
+/* ================== GLOBAL RESET ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;   /* SAME background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================== HEADER / NAVBAR ================== */
+header {
+    background: linear-gradient(90deg, #203a43, #2c5364);
+    padding: 18px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.header-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 22px;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================== HERO SECTION ================== */
+.hero {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6f9; /* SAME background */
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #203a43;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+/* ================== BUTTON ================== */
+ .btn { display: inline-block; background: linear-gradient(90deg, #203a43, #2c5364); color: #fff; padding: 13px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; } .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+
+/* ================== ABOUT SECTION WITH IMAGE ================== */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #203a43;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ================== RESPONSIVE ABOUT SECTION ================== */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: center;
+    }
+}
+
+/* ================== MAIN CONTENT ================== */
+main {
+    min-height: calc(100vh - 140px);
+    padding: 60px 10%;
+    background: #f4f6f9;
+}
+
+main h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #203a43;
+    text-align: center;
+}
+
+main p {
+    font-size: 16px;
+    max-width: 900px;
+    margin: auto;
+    color: #555;
+    text-align: center;
+}
+
+/* ================== DASHBOARD / STORY ================== */
+.tableau-box {
+    background: #ffffff;
+    padding: 35px;
+    margin: 50px auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableau-box iframe {
+    width: 100%;
+    max-width: 1100px;
+    height: 800px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+/* ================== TEAM SECTION ================== */
+.team-section {
+    padding: 70px 20px;
+    background-color: #f4f6f9; /* SAME background */
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #203a43;
+    margin-bottom: 12px;
+}
+
+.team-section p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 45px;
+}
+
+/* GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARD */
+.team-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #203a43;
+    margin-bottom: 18px;
+}
+
+/* TEXT */
+.team-card h3 {
+    color: #203a43;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.team-card span {
+    display: block;
+    font-weight: 600;
+    color: #0077b5;
+    margin-bottom: 8px;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* LINKEDIN */
+.linkedin {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #0077b5;
+    text-decoration: none;
+}
+
+/* ================== CONTACT PAGE ================== */
+.contact-container {
+    max-width: 760px;          /* increased width */
+    width: 150%;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 20px 60px;        /* more inner spacing */
+    border-radius: 20px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #203a43;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 18px;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.contact-form button {
+    align-self: center;
+    width: 160px;
+}
+
+/* ================== CONTACT PAGE WITH IMAGE ================== */
+.contact-wrapper {
+    min-height: calc(100vh - 80px);   /* taller section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;                       /* more space between form & image */
+    padding: 60px 40px;              /* bigger top/bottom & sides */
+    background: #f4f6f9;
+}
+
+
+.contact-image img {
+    max-width: 460px;
+    border-radius: 20px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact-image img {
+        max-width: 90%;
+    }
+}
+
+.contact-subtext {
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+
+/* ================== FOOTER ================== */
+footer {
+    background: linear-gradient(90deg, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+
+
