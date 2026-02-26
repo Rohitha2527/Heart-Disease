@@ -1,5 +1,5 @@
 ❤️ Heart Disease Data Visualization Dashboard
-📌 Project Overview
+##📌 Project Overview
 
 This project presents a story-driven data visualization dashboard built on a heart disease dataset.
 
@@ -7,7 +7,7 @@ The focus is purely on visual exploration and insight communication, transformin
 
 The dashboard is deployed as a web application using Flask and hosted on Render.
 
-🎯 Project Goal
+##🎯 Project Goal
 
 Visualize cardiovascular health data effectively
 
@@ -17,7 +17,7 @@ Highlight key patterns through graphical comparison
 
 Deploy the visualization dashboard for online access
 
-🛠 Technologies Used
+##🛠 Technologies Used
 
 Python
 
@@ -35,7 +35,7 @@ Gunicorn
 
 Render
 
-📊 Dashboard Highlights
+##📊 Dashboard Highlights
 
 The dashboard includes visual analysis of:
 
