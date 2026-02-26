@@ -9,47 +9,47 @@ The dashboard is deployed as a web application using Flask and hosted on Render.
 
 🎯 Project Goal
 
--Visualize cardiovascular health data effectively
+- Visualize cardiovascular health data effectively
 
--Create a structured story flow using charts
+- Create a structured story flow using charts
 
--Highlight key patterns through graphical comparison
+- Highlight key patterns through graphical comparison
 
--Deploy the visualization dashboard for online access
+- Deploy the visualization dashboard for online access
 
 🛠 Technologies Used
 
--Python
+- Python
 
--Pandas
+- Pandas
 
--Matplotlib
+- Matplotlib
 
--Seaborn
+- Seaborn
 
 -Flask
 
--HTML / CSS
+- HTML / CSS
 
--Gunicorn
+- Gunicorn
 
--Render
+- Render
 
 📊 Dashboard Highlights
 
--The dashboard includes visual analysis of:
+- The dashboard includes visual analysis of:
 
--Age distribution of patients
+- Age distribution of patients
 
--Cholesterol level comparison
+- Cholesterol level comparison
 
--Resting blood pressure patterns
+- Resting blood pressure patterns
 
--Maximum heart rate variations
+- Maximum heart rate variations
 
-Target variable distribution
+- Target variable distribution
 
--Visual comparison between heart disease affected and non-affected groups
+- Visual comparison between heart disease affected and non-affected groups
 
 -Each visualization contributes to a structured analytical narrative.
 
