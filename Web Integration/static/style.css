@@ -432,14 +432,12 @@ main p {
     outline: none;
 }
 
-/* Remove extra select styling differences */
 .risk-form select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-/* Button alignment */
 .risk-btn {
     display: block;
     margin: 20px auto;
@@ -453,6 +451,7 @@ footer {
     margin-top: 60px;
     font-size: 14px;
 }
+
 
 
 
