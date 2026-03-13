@@ -442,6 +442,33 @@ main p {
     display: block;
     margin: 20px auto;
 }
+/* ================= RISK FORM FIX ================= */
+
+.risk-form{
+    display:block;
+    width:100%;
+}
+
+/* each field takes full row */
+
+.risk-form input,
+.risk-form select{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+/* button center */
+
+.risk-btn{
+    display:block;
+    margin:25px auto;
+    width:180px;
+}
 /* ================== FOOTER ================== */
 footer {
     background: linear-gradient(90deg, #203a43, #2c5364);
@@ -451,6 +478,7 @@ footer {
     margin-top: 60px;
     font-size: 14px;
 }
+
 
 
 
