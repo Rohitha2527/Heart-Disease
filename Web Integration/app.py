@@ -51,6 +51,7 @@ def calculate_risk():
 
     age = int(request.form["age"])
     gender = request.form["gender"]
+    diabetes = request.form["diabetes"]
     cholesterol = int(request.form["cholesterol"])
     blood_pressure = int(request.form["blood_pressure"])
     heart_rate = int(request.form["heart_rate"])
@@ -65,22 +66,26 @@ def calculate_risk():
     if gender == "male":
         risk_score += 1
 
+    #diabetes condition
+    if diabetes == "yes":
+        risk_score += 2
+
     # Cholesterol condition
     if cholesterol >= 240:
-        risk_score += 1
+        risk_score += 2
 
     # Blood Pressure condition
     if blood_pressure >= 140:
-        risk_score += 1
+        risk_score += 2
 
     # Heart Rate condition
     if heart_rate < 100:
         risk_score += 1
 
     # Risk Result
-    if risk_score >= 4:
+    if risk_score >= 6:
         result = "High Risk of Heart Disease"
-    elif risk_score >= 2:
+    elif risk_score >= 3:
         result = "Moderate Risk"
     else:
         result = "Low Risk"
@@ -92,5 +97,6 @@ def calculate_risk():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
