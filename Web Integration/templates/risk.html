@@ -1,40 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Heart Disease Risk Checker</title>
+    <title>Risk Prediction | Heart Disease Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<h2>Heart Disease Risk Checker</h2>
+<header>
+    <div class="header-container">
+        <h1>Welcome</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/story">Story</a>
+            <a href="/team">Team</a>
+            <a href="/contact">Contact</a>
+            <a href="/risk">Risk Prediction</a>
+        </nav>
+    </div>
+</header>
 
-<form action="/calculate_risk" method="post">
 
-<label>Age:</label>
-<input type="number" name="age" required><br><br>
+<section class="contact-wrapper">
 
-<label>Gender:</label>
-<select name="gender">
-<option value="male">Male</option>
-<option value="female">Female</option>
-</select><br><br>
+    <!-- LEFT SIDE FORM -->
+    <div class="contact-container">
 
-<label>Cholesterol:</label>
-<input type="number" name="cholesterol" required><br><br>
+        <h2>Heart Disease Risk Checker</h2>
 
-<label>Blood Pressure:</label>
-<input type="number" name="blood_pressure" required><br><br>
+        <p class="contact-subtext">
+            Enter health parameters to estimate the risk level of heart disease.
+        </p>
 
-<label>Maximum Heart Rate:</label>
-<input type="number" name="heart_rate" required><br><br>
+        <form class="contact-form" action="/calculate_risk" method="POST">
 
-<button type="submit">Check Risk</button>
+            <input type="number" name="age" placeholder="Age" required>
 
-</form>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
 
-{% if prediction %}
-<h3>Result: {{ prediction }}</h3>
-{% endif %}
+            <input type="number" name="cholesterol" placeholder="Cholesterol Level" required>
+
+            <input type="number" name="blood_pressure" placeholder="Blood Pressure" required>
+
+            <input type="number" name="heart_rate" placeholder="Maximum Heart Rate" required>
+
+            <button type="submit" class="btn">Check Risk</button>
+
+        </form>
+
+        {% if prediction %}
+        <div class="result-box">
+            <h3>{{ prediction }}</h3>
+        </div>
+        {% endif %}
+
+    </div>
+
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="contact-image">
+        <img src="{{ url_for('static', filename='Heart1.jpg') }}" 
+        alt="Heart Disease Illustration">
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 Heart Disease Analysis
+</footer>
 
 </body>
 </html>
