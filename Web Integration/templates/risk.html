@@ -54,11 +54,15 @@
 
         </form>
 
-        {% if prediction %}
-        <div class="result-box">
-            <h3>{{ prediction }}</h3>
-        </div>
-        {% endif %}
+      {% if prediction %}
+<div class="result-box
+{% if 'Low' in prediction %}low-risk
+{% elif 'Moderate' in prediction %}moderate-risk
+{% else %}high-risk
+{% endif %}">
+{{ prediction }}
+</div>
+{% endif %}
 
     </div>
 
@@ -78,4 +82,5 @@
 
 </body>
 </html>
+
 
